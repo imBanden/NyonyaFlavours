@@ -1,0 +1,595 @@
+html{
+    background-color: hsl(210, 0%, 87.5%);
+}
+
+body{   
+    margin: 0px;
+}
+
+@media only screen and (max-width: 750px) {
+    /* For mobile phones: */
+    .menu-item-pop-up-container{
+      width: 100%;
+      height: 100%;
+    }
+
+    .shopping-cart-scrolled-container{
+        width: 100%;
+    }
+  }
+
+/* keyframs classes */
+@keyframes animation-fade-in{
+    0%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+
+@keyframes animation-slide-left{
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(0%);}
+}
+
+@keyframes animation-slide-up{
+    0%{opacity: 0%; transform: translateY(100%);}
+    50%{opacity: 0%;}
+    100%{transform: translateY(0%); opacity: 100%;}
+}
+
+@keyframes animation-slide-down{
+    0%{opacity: 100%; transform: translateY(0%);}
+    50%{opacity: 0%;}
+    100%{transform: translateY(100%); opacity: 0%;}
+}
+
+/* animation classes */
+.animation-fade-in{
+    animation: animation-fade-in 300ms forwards ease-out;
+}
+
+.animation-slide-left{
+    animation: animation-slide-left 300ms forwards ease-out;
+}
+
+.animation-slide-up{
+    animation: animation-slide-up 300ms forwards ease-out;
+}
+
+.animation-slide-down{
+    animation: animation-slide-down 300ms forwards ease-out;
+}
+
+
+/*header container*/
+.header-container{
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(210, 0%, 100%);
+    padding: 20px 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.header-container-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-menu-button{
+    display: flex;
+    border: none;
+    background-color: hsl(210, 0%, 100%);
+}
+
+.header-menu-icon{
+    color: hsl(210, 0%, 0%);
+    height: 24px;
+    cursor: pointer;
+}
+
+.spacer-24px{
+    width: 24px;
+}
+
+.header-brand-name-tag{
+    text-decoration: none;
+}
+
+.header-brand-name{
+    font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+    font-size: 18px;
+    font-weight: 700;
+    color: hsl(210, 0%, 0%);
+}
+
+.header-shopping-cart-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: hsl(210, 0%, 100%);
+}
+
+.header-shopping-cart-icon{
+    color: hsl(210, 0%, 0%);
+    height: 24px;
+    cursor: pointer;
+}
+
+.header-shopping-cart-number-icon-background{
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    background-color: hsla(210, 0%, 0%, 100%);
+    border-radius: 50px;
+    border: none;
+    height: 20px;
+    width: 20px;
+    transform: translate(13px, -7px);
+    justify-content: center;
+    align-items: center;
+}
+
+.header-shopping-cart-number-icon-number{
+    color: hsl(210, 0%, 100%);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+/* food menu container */
+.food-menu-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* menu-section-classes */
+.food-menu-section-container{
+    display: flex;
+    max-width: 860px;
+    padding: 40px 0px;
+}
+
+.food-menu-section-name{
+    font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+    font-size: 48px;
+    font-weight: 700;
+    color: hsl(0, 0%, 0%);
+}   
+
+
+
+/* menu-item-classes */
+.food-menu-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    gap: 40px 40px;
+}
+
+.food-menu-item{
+    background-color: hsl(210, 0%, 100%);
+    font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+    width: 200px;
+    box-shadow: 0px 4px 6px hsla(0, 0%, 0%, 0.2);
+    transition: all 100ms ease-out;
+    cursor: pointer;
+}
+
+.food-menu-item:hover{
+    transform: scale(102%);
+    box-shadow: 0px 1px 2px hsla(0, 0%, 0%, 0.1);
+}
+
+.food-menu-item:active{
+    transform: scale(95%);
+    box-shadow: 0px 6px 20px hsla(0, 0%, 0%, 0.4);
+}
+
+.food-menu-item-img{
+    object-fit: cover;
+    height: 150px;
+    width: 200px;
+}
+
+.food-menu-item-text{
+    padding: 10px;
+}
+
+.food-menu-item-name{
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 0px;
+    letter-spacing: -0.05em;
+}
+
+.food-menu-item-price{
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    align-items: baseline;
+}
+
+.food-menu-item-price-number{
+    color: hsl(0, 0%, 0%);
+}
+
+.food-menu-item-price-noun{
+    color: hsl(0, 0%, 25%);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.food-menu-item-description{
+    font-size: 14px;
+    font-weight: 400;
+    color: hsl(210, 0%, 50%);
+    height: 100px;
+    overflow-y: hidden;
+    white-space: normal;
+    text-overflow: clip;
+}
+
+/* menu pop up box */
+.menu-item-pop-up-background{
+    display: none; /*will be "flex" when a menu item is clicked up*/
+    opacity: 0; /*will be "1" when a menu item is clicked up*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    background-color: hsla(210, 0%, 0%, 0.2);
+    justify-content: center;
+    
+}
+.menu-item-pop-up-box{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item-pop-up-container{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 550px;
+    background-color: hsl(210, 0%, 100%);
+    font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+}
+
+.menu-item-pop-up-top{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.menu-item-pop-up-close-button{
+    position: absolute;
+    z-index: 10;
+    border: none;
+    border-radius: 20px;
+    font-size: 36px;
+    background-color: hsla(210, 0%, 100%, 0.8);
+    color: hsl(210, 0%, 0%);
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px hsla(210, 0%, 0%, 0.5);
+}
+
+.menu-item-pop-up-image{
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+.menu-item-pop-up-name{
+    font-size: 36px;
+    font-weight: 700;
+    color: hsl(0, 0%, 0%);
+    padding: 20px 10px;
+    padding-bottom: 10px;
+}
+
+.menu-item-pop-up-description{
+    font-size: 14px;
+    font-weight: 400;
+    color: hsl(0, 0%, 50%);
+    padding: 10px 10px;
+    overflow-y: auto;
+}
+
+.menu-item-pop-up-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    padding-top: 0px;
+    border-top: 1px solid hsla(210, 0%, 0%, 0.1);
+}
+
+.menu-item-pop-up-quantity-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.menu-item-pop-up-plus-minus-button{
+    border: 1px solid hsl(210, 0%, 0%);
+    font-size: 30px;
+    font-weight: 700;
+    color: hsl(210, 0%, 0%);
+    background-color: hsl(210, 0%, 100%);
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    transition: all 100ms ease-out;
+}
+
+.menu-item-pop-up-plus-minus-button:hover{
+    color: hsl(210, 0%, 100%);
+    background-color: hsl(210, 0%, 0%);
+}
+
+.menu-item-pop-up-quantity{
+    font-size: 48px;
+    font-weight: 700;
+    color: hsl(0, 0%, 0%);
+    padding: 0px 20px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    transform: translateY(5px);
+}
+
+.menu-item-pop-up-add-button{
+    border: none;
+    background-color: hsl(210, 0%, 0%);
+    color: hsl(210, 0%, 100%);
+    font-size: 18px;
+    padding: 20px 0px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu-item-pop-up-add-button:hover{
+    background-color: hsl(210, 0%, 25%);
+}
+
+/* shopping cart slider classes */
+.shopping-cart-slider-background{
+    display: none; /*change to flex when clicked upon*/
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    background-color: hsla(210, 0%, 0%, 0.2); 
+    justify-content: flex-end;   
+}
+
+
+.shopping-cart-slider-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: hsl(210, 0%, 100%);
+    width: 1024px; /*change later*/
+    height: 100%;
+    font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+    padding: 10px 10px;
+}
+
+
+.shopping-cart-slider-container-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-grow: 1;
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsla(210, 0%, 0%, 0.1);
+}
+
+.shopping-cart-slider-container-middle-empty-cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 40;
+}
+
+.shopping-cart-slider-container-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-end;
+    padding: 20px 20px;
+    flex-grow: 1;
+    border-top: 1px solid hsla(210, 0%, 0%, 0.1);
+}
+
+.spacer-40px{
+    width: 40px;
+}
+.shopping-cart-slider-title{
+    color: hsl(210, 0%, 0%);    
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.shopping-cart-slider-close-button{
+    border: none;
+    font-size: 36px;
+    color: hsl(210, 0%, 0%);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.shopping-cart-slider-container-empty-cart-message{
+    color: hsl(210, 0%, 0%);
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+
+.shopping-cart-slider-container-empty-cart-icon{
+    height: 30px;
+}
+
+.shopping-cart-slider-subtotal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 20px;
+}
+
+.shopping-cart-slider-checkout-button-container{
+    width: 100%;
+}
+
+.shopping-cart-slider-checkout-button{
+    border: none;
+    background-color: hsl(210, 0%, 0%);
+    color: hsl(210, 0%, 100%);
+    font-size: 18px;
+    padding: 20px 0px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.shopping-cart-slider-checkout-button:hover{
+    background-color: hsl(210, 0%, 25%);
+}
+
+.shopping-cart-slider-container-middle-full-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px;
+    flex-grow: 40;
+    overflow-y: auto;
+    gap: 20px;
+}
+
+.shopping-cart-slider-item-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: hsl(210, 0%, 100%);
+    box-shadow: 0px 3px 6px hsla(210, 0%, 0%, 0.2);
+    font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+}
+
+.shopping-cart-slider-item-image{
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+}
+
+.shopping-cart-slider-item-name{
+    color: hsl(210, 0%, 0%);
+    font-size: 14px;
+    font-weight: 400;
+    width: 100px;
+    padding: 10px 10px;
+    flex-grow: 2;
+}
+
+.shopping-cart-slider-item-quantity{
+    color: hsl(210, 0%, 0%);
+    font-size: 20px;
+    font-weight: 700;
+    width: 25px;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 2;
+}
+
+.shopping-cart-slider-item-quantity-drop-down{
+    height: 25px;
+    border: none;
+    color: hsl(210, 0%, 0%);
+    font-size: 14px;
+    font-weight: 700;
+    background-color: hsl(210, 0%, 87.5%);
+}
+
+
+.shopping-cart-slider-item-price{
+    color: hsl(210, 0%, 0%);
+    font-size: 14px;
+    font-weight: 400;
+    width: 50px;
+    text-align: end;
+    flex-grow: 2;
+}
+
+.shopping-cart-slider-item-remove-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: hsl(210, 0%, 100%);
+    cursor: pointer;
+    flex-grow: 2;
+}
+
+.shopping-cart-slider-item-remove-icon{
+    height: 20px;
+}
+
+/* shopping cart button when scrolled down classes */
+.shopping-cart-scrolled-box{
+    display: flex;
+    opacity: 0%;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    justify-content: center;
+}
+
+.shopping-cart-scrolled-button{
+    border: none;
+    border-radius: 50px;
+    background-color: hsl(210, 0%, 0%);
+    color: hsl(210, 0%, 100%);
+    font-family: -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 10px 0px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.shopping-cart-scrolled-container{
+    width: 500px;
+    padding: 20px 20px;
+}
+
+.shopping-cart-scrolled-button:hover{
+    background-color: hsl(210, 0%, 25%);
+}

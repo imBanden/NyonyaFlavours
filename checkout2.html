@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Peranakan Palate | Home Away from Home</title>
+    <link rel="stylesheet" href="checkout2.css">
+</head>
+<body>
+    <!-- header same as index's -->
+    <div class="header-container">
+        <div class="header-container-left">
+            <button class="header-menu-button">
+                <img class="header-menu-icon" src="MaterialSymbolsMenu.svg">
+            </button>
+            <div class="spacer-24px"></div>
+            <a class="header-brand-name-tag" href="index.html">
+                <div class="header-brand-name">Peranakan Palate</div>
+            </a>
+        </div>
+
+        <button class="header-shopping-cart-button">
+            <img class="header-shopping-cart-icon" src="MaterialSymbolsShoppingBagOutlineSharp.svg">
+                <!-- <div class="header-shopping-cart-number-icon-background">
+                    <div class="header-shopping-cart-number-icon-number">5</div>
+                </div> -->
+            </img>
+        </button>
+    </div>
+
+
+    <!-- main body -->
+    <div class="body-outer-container-main">
+        <div class="body-container-main">
+
+            <!-- payment side of the main container -->
+            <div class="body-container-left">
+                <div class="details-container">
+                    <div class='details-label'>Contact</div>
+                    <div class="vertical-spacer-10px"></div>
+                    <input class="details-input-box" placeholder="Email">
+                </div>
+                <div class="details-container">
+                    <div class='details-label'>Payment</div>
+                    <div class="vertical-spacer-10px"></div>
+
+                    <input class="details-input-box" placeholder="Card number">
+                    <div class="vertical-spacer-20px"></div>
+
+                    <div class="card-details-container">
+                        <input class="details-input-box flex-grow-half-half" placeholder="Expiration date (mm/yy)">
+                        <input class="details-input-box flex-grow-half-half" placeholder="Security Code / CVV">
+                    </div>
+                    <div class="vertical-spacer-20px"></div>
+
+                    <input class="details-input-box" placeholder="Name on card">
+                    <div class="vertical-spacer-40px"></div>
+
+                    <div class="pay-now-button-big-screen-container">
+                        <button class="pay-now-button">Pay now</button>
+                    </div>
+                    <div class='details-label order-summary-div'>Order Summary</div>
+                    
+                </div>
+            </div>
+
+
+
+            <!-- cart side of the main container -->
+            <div class="body-container-right">
+
+                <!-- cart-container -->
+                <div class="cart-container">
+                    <!-- <div class="cart-item">
+                        <img class="cart-item-img" src="Bak Zhang.png"></img>
+                        <div class="cart-item-details">
+                            <div class="cart-item-name">Bak Zhang</div>
+                            <div class="cart-item-qty">Qty: 1</div>
+                        </div>
+                        <div class="cart-item-price">$4.00</div>
+                    </div> -->
+                </div>
+
+                <!-- discount container -->
+                <div class="discount-code-gift-card-container">
+                    <div class="discount-code-gift-card-subcontainer">
+                        <input class="details-input-box discount-code-gift-card-input-box" placeholder="Discount code or gift card">
+                        <button class="discount-code-gift-card-apply-button" disabled>Apply</button>
+                    </div>
+                    <div class="discount-code-gift-card-warning-subcontainer">
+                        <img class="discount-code-gift-card-warning-icon" src="MaterialSymbolsErrorOutline.svg">
+                        <div class="discount-code-gift-card-warning-message">Enter a valid discount code or gift card</div>
+                    </div>
+                </div>
+                
+
+                <!-- price container -->
+                <div class="price-container">
+                    <div class="subtotal-price-container price-subcontainers">
+                        <div>Subtotal</div>
+                        <div class="subtotal-price-number">£100.00</div>
+                    </div>
+                    
+                    <div class="discount-price-container price-subcontainers">
+                        <div>
+                            <div class="discount-price-text">Discount (0%)</div>
+                            <div class="discount-price-text-code">"FIRST20"</div>
+                        </div>
+
+                        <div class="discount-price-number">-£0.00</div>
+                    </div>
+
+                    <div class="total-price-container price-subcontainers">
+                        <div>Total</div>
+                        <div class="total-price-number">£100.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- pay now button for smaller screens -->
+        <div class="pay-now-button-small-screen-container">
+            <button class="pay-now-button">Pay now</button>
+        </div>
+    </div>
+
+    <!-- pop up message -->
+    <div class="pop-up-message-container">
+        <div class="pop-up-message">Discount successfully applied!</div>
+    </div>
+
+    
+    <script type= module src="./js/checkout2.js"></script>
+</body>
+</html>
