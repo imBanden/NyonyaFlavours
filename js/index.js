@@ -3,7 +3,118 @@ import { menuStorage } from './admin.js';
 
 console.log(menuStorage);
 
-let menu = menuStorage["menu"];
+let defaultMenu = [
+    {
+        "name": "Bak Zhang",
+        "price": 2,
+        "noun": "pc",
+        "category": "zhangs",
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, quae. Ad minus numquam in id architecto iste repellat asperiores eveniet?"
+    },
+    {
+        "name": "Zhang",
+        "price": 5,
+        "noun": "pc",
+        "category": "zhangs",
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, quae. Ad minus numquam in id architecto iste repellat asperiores eveniet?"
+    },
+    {
+        "name": "Nyonya Zhang",
+        "price": 5,
+        "noun": "pc",
+        "category": "zhangs",
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, quae. Ad minus numquam in id architecto iste repellat asperiores eveniet?"
+    },
+    {
+        "name": "Nyonya Haebee Sambal Prawn Zhang",
+        "price": 5,
+        "noun": "pc",
+        "category": "zhangs",
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, quae. Ad minus numquam in id architecto iste repellat asperiores eveniet? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, quae. Ad minus numquam in id architecto iste repellat asperiores eveniet?"
+    },
+    {
+        "name": "Nasi",
+        "price": 9,
+        "noun": "box",
+        "category": "rice",
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, quae."
+    },
+    {
+        "name": "Mi Goreng",
+        "price": 2,
+        "noun": "box",
+        "category": "noodles",
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, quae. Ad minus numquam in id architecto iste repellat asperiores eveniet?"
+    },
+    {
+        "name": "Mi Rebus",
+        "price": 4,
+        "noun": "box",
+        "category": "noodles",
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, quae. Ad minus numquam in id architecto iste repellat asperiores eveniet?"
+    },
+    {
+        "name": "Char Kue afkjdkla",
+        "price": 3,
+        "noun": "box",
+        "category": "noodles",
+        "quantity": 1,
+        "description": "penang food abfldajfkldajfklasdjkfkljsaf"
+    },
+    {
+        "name": "Banana",
+        "price": 1,
+        "noun": "pc",
+        "category": "dessert",
+        "quantity": 4,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, quae. Ad minus numquam in id architecto iste repellat asperiores eveniet?"
+    },
+    {
+        "name": "Sugar",
+        "price": 9.5,
+        "noun": "g",
+        "category": "dessert",
+        "quantity": 500,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, quae. Ad minus numquam in id architecto iste repellat asperiores eveniet?"
+    },
+    {
+        "name": "Chocolate",
+        "price": 1.32,
+        "noun": "bar",
+        "category": "dessert",
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, quae. Ad minus numquam in id architecto iste repellat asperiores eveniet?"
+    },
+    {
+        "name": "Cake",
+        "price": 6,
+        "noun": "slice",
+        "category": "dessert",
+        "quantity": 1,
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, quae. Ad minus numquam in id architecto iste repellat asperiores eveniet?"
+    },
+    {
+        "name": "Ice Cream",
+        "price": 3,
+        "noun": "scoop",
+        "category": "dessert",
+        "quantity": 2,
+        "description": "Lorem ipsum, dolor sit amet consectetur."
+    }
+]
+
+let menu = {}
+
+if (menuStorage) menu = menuStorage['menu'];
+else menu = defaultMenu
+
 console.log(menu[0]);
 let prevCategory = "";
 
